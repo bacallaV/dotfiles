@@ -1,0 +1,14 @@
+# Carpeta local/vendored que quieras ignorar
+.config/nvim/.local
+.config/nvim/.cache
+
+# Swap, undo, sesiones (si las generas en .config/nvim)
+.*.swp
+**/swap
+**/session*
+**/undo
+
+# Archivos generados o temporales
+*.log
+*.tmp
+

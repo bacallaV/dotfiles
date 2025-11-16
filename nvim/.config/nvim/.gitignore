@@ -1,0 +1,12 @@
+tt.*
+.tests
+doc/tags
+debug
+.repro
+foo.*
+*.log
+data
+
+# Archivos de estado y lock de Lazy
+lazy-lock.json
+lazy-lock.json.old
