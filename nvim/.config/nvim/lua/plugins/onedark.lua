@@ -1,8 +1,6 @@
 return {
   {
     "navarasu/onedark.nvim",
-    lazy = false,
-    priority = 1000,
     opts = {
       style = "deep", -- estilos: dark, darker, cool, deep, warm, warmer
       transparent = false,
