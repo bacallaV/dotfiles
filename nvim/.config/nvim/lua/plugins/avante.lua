@@ -14,8 +14,9 @@ return {
         -- add any opts here
         -- this file can contain specific instructions for your project
         instructions_file = "avante.md",
+        auto_suggestions_provider = "openai",
         -- for example
-        provider = "claude",
+        provider = "openai",
         providers = {
           claude = {
             endpoint = "https://api.anthropic.com",
@@ -25,6 +26,12 @@ return {
               temperature = 0.75,
               max_tokens = 20480,
             },
+          },
+          openai = {
+            endpoint = "https://api.openai.com/v1",
+            model = "gpt-4o-mini",
+            timeout = 30000,
+            extra_request_body = { temperature = 0.2, max_tokens = 8192 },
           },
           moonshot = {
             endpoint = "https://api.moonshot.ai/v1",
