@@ -7,7 +7,7 @@ return {
           explorer = {
             layout = {
               -- ojo: "layout.layout.position"
-              layout = { position = "right" },
+              layout = { position = "left" },
             },
           },
         },
