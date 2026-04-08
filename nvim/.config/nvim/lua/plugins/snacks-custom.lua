@@ -19,6 +19,41 @@ return {
         end,
         desc = "GitHub Workflows",
       },
+      {
+        "<leader>fe",
+        function()
+          local root = LazyVim.root()
+
+          Snacks.picker.files({
+            cwd = root,
+            title = "Env Files",
+            hidden = true,
+            ignored = true,
+            follow = true,
+            exclude = { ".git", "node_modules", "dist", "build", ".venv", "venv", "__pycache__" },
+            transform = function(item)
+              local name = vim.fn.fnamemodify(item.file, ":t")
+              local allowed = {
+                [".env"] = true,
+                [".env.local"] = true,
+                [".env.development"] = true,
+                [".env.development.local"] = true,
+                [".env.production"] = true,
+                [".env.production.local"] = true,
+                [".env.test"] = true,
+                [".env.test.local"] = true,
+                ["local.settings.json"] = true,
+                ["environment.ts"] = true,
+                ["environment.development.ts"] = true,
+                ["environment.staging.ts"] = true,
+                ["environment.production.ts"] = true,
+              }
+              return allowed[name] and item or false
+            end,
+          })
+        end,
+        desc = "Env Files",
+      },
     },
   },
 }
