@@ -20,7 +20,7 @@ return {
         desc = "GitHub Workflows",
       },
       {
-        "<leader>fe",
+        "<leader>fC",
         function()
           local root = LazyVim.root()
 
