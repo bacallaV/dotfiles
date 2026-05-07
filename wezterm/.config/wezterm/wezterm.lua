@@ -8,7 +8,10 @@ local config = wezterm.config_builder()
 -- This is where you actually apply your config choices.
 
 -- or, changing the font size and color scheme.
-config.font_size = 14
+config.font_size = 12
+config.font = wezterm.font({ family = "Fira Code", harfbuzz_features = { "calt=0", "clig=0", "liga=0" } })
+config.line_height = 1.1
+
 config.color_scheme = "Tokyo Night"
 
 config.window_background_opacity = 0.85
@@ -17,6 +20,11 @@ config.window_padding = {
 	right = 24,
 	top = 24,
 	bottom = 24,
+}
+
+config.inactive_pane_hsb = {
+	saturation = 0.9,
+	brightness = 0.5,
 }
 
 -- Finally, return the configuration to wezterm:
