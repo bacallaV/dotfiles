@@ -10,16 +10,16 @@ local config = wezterm.config_builder()
 -- or, changing the font size and color scheme.
 config.font_size = 12
 config.font = wezterm.font({ family = "Fira Code", harfbuzz_features = { "calt=0", "clig=0", "liga=0" } })
-config.line_height = 1.1
+config.line_height = 1.2
 
 config.color_scheme = "Tokyo Night"
 
 config.window_background_opacity = 0.85
 config.window_padding = {
-	left = 24,
-	right = 24,
-	top = 24,
-	bottom = 24,
+	left = 4,
+	right = 4,
+	top = 4,
+	bottom = 4,
 }
 
 config.inactive_pane_hsb = {
